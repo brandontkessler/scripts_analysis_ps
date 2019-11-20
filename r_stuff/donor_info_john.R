@@ -6,14 +6,6 @@ library(ggplot2)
 library(scales)
 library(writexl)
 
-dt.convert <- function(col){
-  return(mdy(str_extract(col, ".*/.*/....")))
-}
-
-clx <- read.csv("../../data/ticket/fy20_all.csv", skip=3) %>%
-  mutate(perf_dt = map(perf_dt, dt.convert))
-
-
 
 dnr <- read.csv('../../data/donor/donors_fy08-present.csv') 
 
